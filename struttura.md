@@ -2,6 +2,14 @@
 
 ## University Table
 
+
+# università
+- id                    INT | AUTO_INCREMENT | UNIQUE | PRIMARY_KEY | NOTNULL
+- nome                  VARCHAR(50) | NOTNULL
+- città                 VARCHAR(50) | NOTNULL
+- indirizzo             VARCHAR(100) | NOTNULL
+
+
 # departments
 - id                    INT | AUTO_INCREMENT | UNIQUE | PRIMARY_KEY | NOTNULL
 - nome                  VARCHAR(50) | NOTNULL
@@ -30,4 +38,5 @@
 - id_studenti       INT | FK | NOTNULL
 - id_insegnanti     INT | FK | NOTNULL
 - id_corso          INT | FK | NOTNULL
-
+- voto              VARCHAR(20) | NOTNULL
+- tipo_esame        VARCHAR(20) | NOTNULL
