@@ -79,3 +79,12 @@ ON teachers.id = course_teacher.teacher_id
 WHERE departments.name LIKE '%MATEMATICA%'
 
 ## 7) BONUS: Selezionare per ogni studente quanti tentativi d’esame ha sostenuto per superare ciascuno dei suoi esami
+SELECT COUNT(exam_student.exam_id) AS 'Numero Tentativi', students.name, students.surname, courses.name 
+FROM students
+JOIN exam_student
+on students.id = exam_student.student_id
+JOIN exams
+on exam_student.exam_id = exams.id
+JOIN courses
+ON exams.course_id = courses.id
+GROUP BY courses.id, exam_student.student_id  
